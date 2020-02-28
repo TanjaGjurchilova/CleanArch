@@ -1,0 +1,57 @@
+<!-- START Sidebar (left)-->
+<div class="aside-inner">
+    <nav class="sidebar" data-sidebar-anyclick-close="">
+        <!-- START sidebar nav-->
+        <ul class="sidebar-nav">
+            <!-- START user info-->
+            <li class="has-user-block">
+                <div id="user-block" class="collapse">
+                    <div class="item user-block">
+                        <!-- User picture-->
+                        <div class="user-block-picture">
+                            <div class="user-block-status">
+                                <img src="~/images/user/02.jpg" alt="Avatar" width="60" height="60" class="img-thumbnail rounded-circle" />
+                                <div class="circle bg-success circle-lg"></div>
+                            </div>
+                        </div>
+                        <!-- Name and Job-->
+                        <div class="user-block-info">
+                            <span class="user-block-name">Hello, Mike</span>
+                            <span class="user-block-role">Designer</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- END user info-->
+            <!-- Iterates over all sidebar items-->
+            <li class="nav-heading">
+                <span>Main Navigation</span>
+            </li>
+            @*<li class="@Html.isActive(controller: "Home")">
+                <a href="#dashboard" title="Dashboard" data-toggle="collapse">
+                    <div class="badge badge-info float-right">2</div>
+                    <em class="icon-speedometer"></em>
+                    <span data-localize="sidebar.nav.Home">Home</span>
+                </a>
+                <ul id="dashboard" class="sidebar-nav sidebar-subnav collapse">
+                    <li class="sidebar-subnav-header">Dashboard</li>
+                    <li class="@Html.isActive("Home", "Items")">
+                        <a href="@Url.Action("Items", "Home")" title="Items">
+                            <span>Items</span>
+                        </a>
+                    </li>
+                    <li class="@Html.isActive("Account", "Login")">
+                        <a href="@Url.Action("Login", "Account")" title="Items 2">
+                            <span>Login</span>
+                        </a>
+                    </li>                   
+                </ul>
+            </li>*@                                                                                                                                                      
+           
+        </ul>
+        <!-- END sidebar nav-->
+    </nav>
+</div>
+<!-- END Sidebar (left)-->
+
+

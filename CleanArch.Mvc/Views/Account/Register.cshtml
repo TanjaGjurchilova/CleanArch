@@ -1,0 +1,116 @@
+﻿@model CleanArch.Mvc.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Register.cshtml";
+}
+<h4></h4>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-xl-2"></div>
+        <div class="col-xl-8">
+            <form method="post" action="Register" data-parsley-validate="" novalidate="">
+                <!-- START card-->
+                <div class="card card-default">
+                    <div class="card-header">
+                        <div class="card-title">Form Register</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="input-group with-focus">
+
+                                <label class="col-form-label">Email Address *</label>
+                                <input class="form-control" type="email" asp-for="User.Email" required="required" />
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group with-focus">
+                                <label class="col-form-label">Firstname *</label>
+                                <input class="form-control" type="text" asp-for="User.Firstname" required="required" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group with-focus">
+                                <label class="col-form-label">Surname *</label>
+                                <input class="form-control" type="text" asp-for="User.Surname" required="required" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group with-focus">
+                                <label class="col-form-label">Username</label>
+                                <input class="form-control" type="text" asp-for="User.Username" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group with-focus">
+                                <label class="col-form-label">City</label>
+                                <input class="form-control" type="text" asp-for="User.City"  />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group with-focus">
+                                <label class="col-form-label">Address</label>
+                                <input class="form-control" type="text" asp-for="User.Address"  />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group with-focus">
+                                <label class="col-form-label">Phone*</label>
+                                <input class="form-control" type="number" asp-for="User.Phone" required="required" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group with-focus">
+                                <label class="col-form-label">Password *</label>
+                                <input class="form-control" id="id-password" type="password" asp-for="User.Password" required="required" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group with-focus">
+                                <label class="col-form-label">Confirm Password *</label>
+                                <input class="form-control" type="password" name="confirmPassword" required="required" data-parsley-equalto="#id-password" />
+                            </div>
+                        </div>
+                        <div class="required" style="color:darkred">* Required fields</div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="clearfix">
+                            <div class="float-left">
+                                <div class="checkbox c-checkbox">
+                                    <label>
+                                        <input type="checkbox" asp-for="AgreeWithTerms" required="required" data-parsley-error-message="Please read and agree the terms" />
+                                        <span class="fa fa-check"></span>I agree with the<a class="ml-2" href="#">terms</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="float-right">
+                                <button class="btn btn-primary" type="submit">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END card-->
+            </form>
+        </div>
+
+    </div>
+
+
+    <div>
+        <a asp-action="Login">Sign In</a>
+    </div>
+</div>
+@section Scripts {
+
+    <environment names="Development">
+        <script src="~/vendor/parsleyjs/dist/parsley.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/vendor/parsleyjs/dist/parsley.js"></script>
+    </environment>
+
+}
+
