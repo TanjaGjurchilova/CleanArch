@@ -4,8 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
-using CleanArch.Mvc.Repositories;
-using CleanArch.Mvc.Repositories.Abstract;
+
 using Microsoft.AspNetCore.Razor.Runtime.TagHelpers;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 

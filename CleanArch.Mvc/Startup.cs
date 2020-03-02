@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
-using CleanArch.Mvc.repositories;
-using CleanArch.Mvc.repositories.Abstract;
-using CleanArch.Mvc.Repositories;
-using CleanArch.Mvc.Repositories.Abstract;
+using CleanArch.Infra.IoC;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -48,9 +45,7 @@ namespace CleanArch.Mvc
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddTransient<IUserRepository, UserRepository>();
-            services.AddTransient<IRoleRepository, RoleRepository>();
-            services.AddTransient<IIndustryRepository, IndustryRepository>();
+          
             services.AddLocalization(opts => {
                 opts.ResourcesPath = "Resources";
                 });
@@ -67,6 +62,7 @@ namespace CleanArch.Mvc
                 opts.SupportedUICultures = suportedCultures;
                 }
             );
+            RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -96,6 +92,10 @@ namespace CleanArch.Mvc
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+        private static void RegisterServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
         }
     }
 }

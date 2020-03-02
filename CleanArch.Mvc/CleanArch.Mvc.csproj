@@ -47,6 +47,10 @@
     <PackageReference Include="Westwind.Globalization" Version="3.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArch.Infra.IoC\CleanArch.Infra.IoC.csproj" />
+  </ItemGroup>
+
 
 
 </Project>

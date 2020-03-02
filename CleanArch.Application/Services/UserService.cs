@@ -7,7 +7,7 @@ using System.Text;
 
 namespace CleanArch.Application.Services
 {
-    class UserService : IUserService
+    public class UserService : IUserService
     {
         private IUserRepository _userRepository;
         public UserService(IUserRepository userRepository)

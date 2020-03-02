@@ -10,14 +10,14 @@ using System.Linq;
 
 namespace CleanArch.Infra.Data.Repository
 {
-    class UserRepository : IUserRepository
+    public class UserRepository : IUserRepository
     {
         private readonly Db _context;
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
-        public UserRepository(Db context)
+        public UserRepository()
         {
-            _context = context;
+            _context = new Db();
         }
         public bool ChangeUserPassword(int userId, string oldPassword, string newPassword)
         {
