@@ -7,6 +7,6 @@ namespace CleanArch.Application.Interfaces
 {
     interface IUserService
     {
-        IEnumerable<UserViewModel> GetUsers();
+        UserViewModel GetUsers();
     }
 }

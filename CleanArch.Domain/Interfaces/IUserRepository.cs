@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CleanArch.Domain.Interfaces
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
         IEnumerable<User> Users();
         User GetUser(int UserId);
