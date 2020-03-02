@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace CleanArch.Mvc.Models
+namespace CleanArch.Domain.Models
 {
     public class Industry
     {

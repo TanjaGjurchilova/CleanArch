@@ -6,7 +6,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace CleanArch.Mvc.Models
+namespace CleanArch.Domain.Models
 {
     public class User
     {

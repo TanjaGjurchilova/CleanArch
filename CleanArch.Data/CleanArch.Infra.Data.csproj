@@ -1,11 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Context\" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.2" />
+    <PackageReference Include="NLog" Version="4.6.8" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.0" />
+    <PackageReference Include="Npgsql" Version="4.1.3.1" />
   </ItemGroup>
 
 </Project>

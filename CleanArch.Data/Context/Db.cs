@@ -10,7 +10,7 @@ using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CleanArch.Mvc.Infrastructure
+namespace CleanArch.Infra.Data
 {
     public class Db
     {
