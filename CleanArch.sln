@@ -24,10 +24,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch.Infra.IoC", "CleanArch.Infra.IoC\CleanArch.Infra.IoC.csproj", "{9CF58D8E-C290-40D8-9B4E-35EAB3B0BEBF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{E8B4125E-8B9D-4156-8945-E5DE4386EE31}"
-	ProjectSection(SolutionItems) = preProject
-		D:\Users\Tanja\Downloads\CleanAtchitecture.drawio = D:\Users\Tanja\Downloads\CleanAtchitecture.drawio
-		D:\Users\Tanja\Downloads\CleanAtchitectureExample.drawio = D:\Users\Tanja\Downloads\CleanAtchitectureExample.drawio
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doc", "Doc\Doc.csproj", "{0C337BCD-6B10-4AF7-9E03-772CC279A13F}"
 EndProject
