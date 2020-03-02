@@ -22,12 +22,12 @@ namespace CleanArch.Infra.Data
         {
             //var configuration = new ConfigurationBuilder().AddJsonFile("wwwroot/appsettingsDB.json").Build();
 
-            var builder = new ConfigurationBuilder()                
-                .AddJsonFile("appsettingsDB.json", optional: false, reloadOnChange: true)
-                .AddEnvironmentVariables();
-            var configuration = builder.Build();
+            //var builder = new ConfigurationBuilder()                
+            //    .AddJsonFile("appsettingsDB.json", optional: false, reloadOnChange: true)
+            //    .AddEnvironmentVariables();
+            //var configuration = builder.Build();
 
-            _connectionString = configuration["DBInfo:DefaultConnection"];
+            _connectionString = "Server=127.0.0.1; Port = 5433; Database=Project_CRIS; User ID=postgres; Password=tanja; Pooling=false; CommandTimeout=60;";/* configuration["DBInfo:DefaultConnection"];*/
             _logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
         }
 

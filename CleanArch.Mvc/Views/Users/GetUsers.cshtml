@@ -1,0 +1,13 @@
+﻿
+@model CleanArch.Application.ViewModels.UserViewModel
+@{
+    ViewData["Title"] = "GetUsers";
+}
+
+<h1>GetUsers</h1>
+
+@foreach(var user in Model.User)
+{
+    <p>@user.FullName</p>
+    <br />
+}

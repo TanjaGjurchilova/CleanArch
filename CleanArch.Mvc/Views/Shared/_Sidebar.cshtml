@@ -27,30 +27,42 @@
             <li class="nav-heading">
                 <span>Main Navigation</span>
             </li>
-            @*<li class="@Html.isActive(controller: "Home")">
-                <a href="#dashboard" title="Dashboard" data-toggle="collapse">
-                    <div class="badge badge-info float-right">2</div>
-                    <em class="icon-speedometer"></em>
-                    <span data-localize="sidebar.nav.Home">Home</span>
+            <li class="nav-item">
+                <a class="nav-link" asp-action="GetUsers" asp-controller="Users"  title="Users">
+                    Users
+                    </a>
+            </li>
+            @*<ul id="dashboard" class="sidebar-nav sidebar-subnav collapse">
+                <li class="@Html.isActive("Users", "GetUsers")">
+                <a href="@Url.Action("GetUsers", "Users")" title="Users">
+                    <span>Users</span>
                 </a>
-                <ul id="dashboard" class="sidebar-nav sidebar-subnav collapse">
-                    <li class="sidebar-subnav-header">Dashboard</li>
-                    <li class="@Html.isActive("Home", "Items")">
-                        <a href="@Url.Action("Items", "Home")" title="Items">
-                            <span>Items</span>
-                        </a>
-                    </li>
-                    <li class="@Html.isActive("Account", "Login")">
-                        <a href="@Url.Action("Login", "Account")" title="Items 2">
-                            <span>Login</span>
-                        </a>
-                    </li>                   
-                </ul>
-            </li>*@                                                                                                                                                      
-           
+                </li>
+            </ul>*@
+            @*<li class="@Html.isActive(controller: "Home")">
+            <a href="#dashboard" title="Dashboard" data-toggle="collapse">
+                <div class="badge badge-info float-right">2</div>
+                <em class="icon-speedometer"></em>
+                <span data-localize="sidebar.nav.Home">Home</span>
+            </a>
+            <ul id="dashboard" class="sidebar-nav sidebar-subnav collapse">
+                <li class="sidebar-subnav-header">Dashboard</li>
+                <li class="@Html.isActive("Home", "Items")">
+                    <a href="@Url.Action("Items", "Home")" title="Items">
+                        <span>Items</span>
+                    </a>
+                </li>
+                <li class="@Html.isActive("Account", "Login")">
+                    <a href="@Url.Action("Login", "Account")" title="Items 2">
+                        <span>Login</span>
+                    </a>
+                </li>
+            </ul>
+        </li>*@
+
         </ul>
-        <!-- END sidebar nav-->
-    </nav>
+            <!-- END sidebar nav-->
+</nav>
 </div>
 <!-- END Sidebar (left)-->
 

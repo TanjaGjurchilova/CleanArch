@@ -70,7 +70,7 @@ namespace CleanArch.Infra.Data.Repository
                 {
                     cmd.Connection.Open();
                 }
-                cmd.CommandText = "SELECT *, s.type, i.type FROM public.users a INNER JOIN public.roles s ON s.id = a.fk_role INNER JOIN public.industry i ON i.id = a.fk_industry ORDER bY a.id DESC";
+                cmd.CommandText = "SELECT *, s.type, i.type FROM public.users a INNER JOIN public.roles s ON s.\"ID\" = a.\"FK_Role\" INNER JOIN public.industry i ON i.\"ID\"= a.\"FK_Industry\" ORDER bY a.\"ID\" DESC";
 
                 dt = _context.ExecuteSelectCommand(cmd);
             }
