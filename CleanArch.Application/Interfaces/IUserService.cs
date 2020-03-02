@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CleanArch.Application.Interfaces
 {
-    interface IUserService
+    public interface IUserService
     {
         UserViewModel GetUsers();
     }
